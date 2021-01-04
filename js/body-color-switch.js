@@ -30,12 +30,15 @@ function changeColorHandler() {
     return;
   };
 
+  btnStartRef.disabled = true;
+
   isActive = true;
   setBodyStyleHandler();
   timer = setInterval(setBodyStyleHandler, 1000);
 };
 
 function stopTimer() {
+  btnStartRef.disabled = false;
   isActive = false;
   clearInterval(timer);
 };
